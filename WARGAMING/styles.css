@@ -1,0 +1,11 @@
+body {
+    background-color: black;
+    font-family: 'League Gothic', "consolas", "sans-serif";
+    background-image: url(imagenes/ground.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    height: 100vh;
+    margin: 0;
+    padding: 0;  
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no , initial-scale=1.0 , maximum-scale=1.0, minimum-scale=1">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="shortcut icon" href="imagenes/Captura.PNG" type="image/x-icon">
+</head>
+
+<body text="white">
+    <center>
+
+    <header>
+        <h2 class="logo">Modificar Perfil</h2>
+        <nav class="navi">
+            <a href="index.html">Inicio</a>
+            <a href="videojuegos.html">Videojuegos</a>
+            <a href="form.html">Perfil</a>
+            
+        </nav>
+    </header>
+        
+    <form action="resultados.html" method="GET">
+        <div>
+            <label for="nombre">Nombre</label>
+            <br>
+            <input type="text" name="nombre" id="nombre" required> 
+        </div>
+
+        <div>
+            <label for="nombreu">Nombre Usuario</label>
+            <br>
+            <input type="text" name="nombreu" id="nombreu" required> 
+        </div>
+
+        <div>
+            <label for="email">Correo Electrónico</label>
+            <br>
+            <input type="email" name="email" id="email" required>
+        </div>
+
+        <div>
+            <label>
+                <strong>Nueva Contraseña</strong>
+                <br>
+                <input class="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}" placeholder="De 6 a 18 caracteres">
+            </label>
+        </div>
+
+        <div>
+            <label>
+                <strong>Confirmar Contraseña</strong>
+                <br>
+                <input class="password2" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,18}" placeholder="De 6 a 18 caracteres" >
+            </label>
+        </div>
+
+        <div>
+            <label for="date">Fecha de Nacimiento</label>
+            <br>
+            <input type="date" name="date" id="start" value="1900-01-01" min="1900-01-01" max="2010-01-01" >
+        </div>
+
+
+
+    <!--   <div>
+            <label for="password_two">Repetir Contraseña</label>
+            <input id="password_two" name="password_two" type="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Verificar Contraseña" required>
+        </div>
+--> 
+        <button class="button" type="submit">Enviar</button>
+        <button class="button" type="reset">Resetear</button>
+
+
+    </form>
+    <div>
+        <audio controls autoplay muted loop >
+            <source src="noise/Warhammer 40,000 Mechanicus Soundtrack - 1. Children of the Omnissiah.mp3" >
+        </audio>
+   </div>
+
+    <script>
+        document.querySelector('.button').onclick = function(){
+
+            var password = document.querySelector('.password').value,
+                password2 = document.querySelector('.password2').value;
+
+                if(password == ""){
+                    alert("Debe ingresar una contraseña")
+                }
+                else if (password != password2){
+                    alert("Las contraseñas no coinciden")
+                }
+                else if (password == password2){
+                    return true
+                }
+                
+        }
+    </script>
+    </center>
+</body>
+</html>
+
